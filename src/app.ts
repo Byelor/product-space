@@ -10,7 +10,7 @@ app.engine('hbs', hbs.express4({partialsDir: path.join(__dirname, "../views/part
 app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, "../public")));
 
-app.use("/user", UserRouter);
+app.use("/users", UserRouter);
 
 
 export default app;
