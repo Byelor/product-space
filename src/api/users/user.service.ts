@@ -3,8 +3,7 @@ import type User from "./user.dto.js";
 
 class UserService{
     
-    async getAll(): Promise<User[]>
-    {
+    getAll = async (): Promise<User[]> =>{
         const rawData = await pool.query(`SELECT name, user_id as "userId", hash_password as "hashPassword", email FROM users;`);
         const userArray: User[] = rawData.rows;
         return userArray;
