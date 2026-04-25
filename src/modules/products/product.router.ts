@@ -1,5 +1,5 @@
 import { Router } from "express";
-import ProductController from "./product.api.controller.js";
+import ProductController from "./api/product.api.controller.js";
 
 class ProductRouter{
     public router: Router = Router();

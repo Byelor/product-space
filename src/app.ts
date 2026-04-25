@@ -1,8 +1,8 @@
 import express from "express";
 import hbs from "express-hbs";
 import path from "path";
-import UserRouter from "./api/users/user.router.js";
-import ProductRouter from "./api/products/product.router.js";
+import UserRouter from "./modules/users/user.router.js";
+import ProductRouter from "./modules/products/product.router.js";
 const __dirname = import.meta.dirname;
 
 const app = express();

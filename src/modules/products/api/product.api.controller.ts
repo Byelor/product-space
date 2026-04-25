@@ -1,4 +1,4 @@
-import ProductService from "./product.service.js";
+import ProductService from "../product.service.js";
 import type { Request, Response, NextFunction } from "express";
 
 class ProductController{
