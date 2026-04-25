@@ -6,12 +6,16 @@ import ProductRouter from "./modules/products/product.router.js";
 const __dirname = import.meta.dirname;
 
 const app = express();
-app.engine('hbs', hbs.express4({partialsDir: path.join(__dirname, "../views/partials")}));
+app.engine('hbs', hbs.express4({partialsDir: path.join(__dirname, "../views/partials"), layoutsDir: path.join(__dirname, "../views/layouts")}));
+
 app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, "../public")));
 
-app.use("/users", UserRouter);
-app.use("/products", ProductRouter);
+
+
+
+app.use("/api/users", UserRouter);
+app.use("/api/products", ProductRouter);
 
 
 export default app;

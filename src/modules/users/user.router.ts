@@ -1,4 +1,4 @@
-import userController from "./user.controller.js";
+import userController from "./api/user.api.controller.js";
 import {Router} from "express";
 
 class UserRouter{

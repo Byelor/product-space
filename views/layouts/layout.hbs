@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- Блок для уникальных мета-тегов или стилей каждой страницы -->
+    {{{block "pageMeta"}}}
+    <link rel="stylesheet" href="/css/global.css">
+</head>
+<body>
+
+    {{> header}} <!-- Партиал: всегда одинаковый файл -->
+
+    <main>
+        {{{body}}} <!-- Основной контент из res.render -->
+    </main>
+
+    {{> footer}} <!-- Партиал: всегда одинаковый файл -->
+
+    <!-- Блок для скриптов, которые нужны не везде -->
+    {{{block "scripts"}}}
+</body>
+</html>
