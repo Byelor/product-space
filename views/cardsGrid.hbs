@@ -2,8 +2,8 @@
     <title>All Products page</title>
 {{/contentFor}}
 
-<div class="grid">
+<div class="cards-grid">
     {{#each products}}
-        {{> card}}
+        {{> (lookup @root 'cardType') this}}
     {{/each}}
 </div>

@@ -1,6 +1,5 @@
 import { Router } from "express";
-import ProductController from "./api/product.api.controller.js";
-
+import ViewProductController from "../views/product.view.controller.js";
 class ProductRouter{
     public router: Router = Router();
 
@@ -8,7 +7,7 @@ class ProductRouter{
         this.initialRoutes();
     }
     private initialRoutes(){
-        this.router.get('/', ProductController.getAll);
+        this.router.get('/', ViewProductController.renderAll);
     }
 }
 export default new ProductRouter().router;
